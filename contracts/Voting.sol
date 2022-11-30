@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 //events have to be added
-pragma solidity 0.8.17;
+pragma solidity >=0.5.16;
 
 contract Voting {
     address private owner;
@@ -20,7 +20,7 @@ contract Voting {
     mapping(uint256 => candidate) cmap;
     mapping(uint256 => voter) vmap;
 
-    constructor() {
+    constructor() public{
         owner = msg.sender;
     }
 

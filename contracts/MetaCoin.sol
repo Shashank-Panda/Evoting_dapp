@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.17;
+pragma solidity >=0.5.16;
 
 import "./ConvertLib.sol";
 
@@ -13,7 +13,7 @@ contract MetaCoin {
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
-	constructor() public {
+	constructor() public{
 		balances[tx.origin] = 10000;
 	}
 
